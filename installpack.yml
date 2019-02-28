@@ -1,0 +1,11 @@
+---
+- hosts: root@slave
+  become: true
+  tasks:
+    - name: Install Package
+      yum:
+        name: 
+          - vim
+          - git
+        state: latest
+

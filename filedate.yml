@@ -1,0 +1,6 @@
+---
+- hosts: root@slave
+  tasks:
+  - name: Will make a file with current date
+    command: touch shivam{{ansible_date_time.date}}{{ansible_date_time.time}}.log
+

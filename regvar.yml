@@ -1,0 +1,10 @@
+---
+- hosts: root@slave
+  tasks:
+  - name: Ansible register variable example
+    shell: "find *.txt"
+    args:
+      chdir: "/madebyshivam"
+    register: reg_out
+  - debug:
+      var: reg_out

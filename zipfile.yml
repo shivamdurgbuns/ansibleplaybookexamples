@@ -1,0 +1,9 @@
+---
+- hosts: root@slave
+  become: true
+  tasks:
+  - name: Zip the files
+    archive:
+      path: /madebyshivam/file1
+      dest: /madebyshivam/file1.zip
+      format: zip

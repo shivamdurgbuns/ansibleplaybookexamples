@@ -1,0 +1,8 @@
+---
+- hosts: root@slave
+  tasks:
+  - name: Replace example
+    replace: 
+      path: /madebyshivam/file1
+      regexp: 'Hello'
+      replace: 'world'

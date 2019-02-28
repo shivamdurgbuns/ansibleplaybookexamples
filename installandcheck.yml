@@ -1,0 +1,13 @@
+---
+- hosts: root@slave
+  become: true
+  tasks:
+  - name: Insatll package
+    yum:
+      name: httpd
+      state: present
+  
+  - name: Start httpd service
+    service: 
+      name: httpd
+      state: started

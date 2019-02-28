@@ -1,0 +1,9 @@
+---
+- hosts: root@slave
+  vars:
+    name:
+      - Shivam
+      - Aman
+  tasks:
+  - name: Array variable
+    debug: msg="{{ name[1] }}"

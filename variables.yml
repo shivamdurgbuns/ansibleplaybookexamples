@@ -1,0 +1,7 @@
+---
+- hosts: root@slave
+  vars:
+    name: shivam
+  tasks:
+  - name: Basic variable example
+    debug: msg="{{name}}"
