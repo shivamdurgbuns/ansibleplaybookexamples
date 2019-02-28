@@ -1,0 +1,11 @@
+---
+- hosts: root@slave
+  become: true
+  tasks:
+  - name: create a diretory with permission
+    file: 
+      path: /madebyshivam
+      state: directory
+      mode: 775 
+      owner: shivam
+      group: shivam

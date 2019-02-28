@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  - name: Ansible create file if it doesn't exist example
+    copy:
+      dest: "/test/test.file"
+      content: |
+          this file is created using ansible playbook
+          did it work?

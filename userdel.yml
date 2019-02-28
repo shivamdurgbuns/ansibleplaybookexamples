@@ -1,0 +1,10 @@
+---
+- hosts: root@slave
+  become: true
+  tasks:
+  - name: remove user
+    user:
+      name: aman
+      state: absent
+      remove: yes
+      force: yes

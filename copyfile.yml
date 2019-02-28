@@ -1,0 +1,8 @@
+---
+- hosts: root@slave
+  become: true
+  tasks:
+  - name: Copy file
+    copy:
+      content: "Hello this is for copy line \n"
+      dest: /madebyshivam/file1

@@ -1,0 +1,10 @@
+---
+- hosts: root@slave
+  become: true
+  tasks:
+  - name: create user
+    user:
+      name: aman
+      password: passaman
+      groups: shivam
+      shell: /bin/bash

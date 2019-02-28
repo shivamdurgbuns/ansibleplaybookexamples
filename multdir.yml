@@ -1,0 +1,10 @@
+---
+- hosts: root@slave
+  become: true
+  tasks:
+  - name: create multiple directories
+    file: path={{item}} state=directory
+    with_items:
+      - '/madebyshivam/dir1'
+      - '/madebyshivam/dir2'
+      - '/madebyshivam/dir3'
